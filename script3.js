@@ -12,7 +12,7 @@ let parab1 = [-.04,-1.6,0];
 let parab2 = [-0.5,40,-740];
 let parabLower = [0.00002,0,-60];
 
-let slope = 2;
+let slope = 2.5;
 let yint = -50;
 
 // Target coordinates
