@@ -1,0 +1,101 @@
+/* General Reset */
+body {
+    padding: 10px;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+/* Fixed container for sliders */
+.controls {
+    top: 100px; /* Distance from the top of the screen */
+
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    margin-right: 20px; 
+}
+
+/* Labels and sliders */
+label {
+    font-size: 1rem;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+input[type="range"] {
+    width: 150px;
+    margin: 0 10px;
+}
+
+span {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #555;
+}
+
+/* Submit Button */
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top:30px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* SVG Styling */
+svg {
+    border: 2px solid #ccc;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Gridlines */
+.grid line {
+    stroke: #ddd;
+    stroke-opacity: 0.7;
+    shape-rendering: crispEdges;
+}
+
+.grid path {
+    display: none;
+}
+
+/* Parabola */
+path.parabola {
+    stroke: steelblue;
+    stroke-width: 2;
+    fill: none;
+}
+
+/* Rays */
+path.line {
+    stroke-width: 2;
+    fill: none;
+}
+
+path.line:first-of-type {
+    stroke: #ff9933; /* Incoming ray */
+}
+
+path.line:last-of-type {
+    stroke: red; /* Reflected ray */
+}

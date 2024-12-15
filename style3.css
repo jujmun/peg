@@ -1,0 +1,129 @@
+/* General Reset */
+body {
+    padding: 10px;
+    font-family: "Courier New", Courier, monospace; /* Retro font */
+    background-color: #000000; /* Deep black background for contrast */
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Fixed container for sliders */
+.controls {
+    top: 100px;
+    background-color: rgba(20, 20, 20, 0.7); /* Dark, semi-transparent background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6), 0 0 20px #ffffff; /* White glow */
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    margin-right: 20px;
+    border: 3px solid #ffffff; /* White border for contrast */
+}
+
+/* Labels and sliders */
+label {
+    font-size: 1.1rem;
+    margin-right: 10px;
+    font-weight: bold;
+    color: #ffffff; /* White color for labels */
+    text-transform: uppercase;
+}
+
+input[type="range"] {
+    width: 200px;
+    margin: 0 10px;
+    -webkit-appearance: none;
+    appearance: none;
+    background: linear-gradient(to right, #ff0000, #ff8c00, #ffeb00, #00ff00, #0000ff, #8a2be2); /* Rainbow gradient */
+    border-radius: 10px;
+    height: 10px;
+    cursor: pointer;
+    box-shadow: 0 0 15px #ffffff inset; /* White glowing track */
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    background: #ffffff; /* White thumb for contrast */
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #ffffff; /* White border */
+    box-shadow: 0 0 15px #ffffff; /* White glowing thumb */
+}
+
+span {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #ffffff; /* White for text */
+}
+
+/* Submit Button */
+button {
+    background-color: #000000; /* Red button */
+    color: white;
+    border: 3px solid #ffffff;
+    padding: 15px 25px;
+    font-size: 1.2rem;
+    font-family: "Courier New", Courier, monospace;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    margin-top: 30px;
+    text-transform: uppercase;
+    box-shadow: 0 0 20px #ffffff; /* White glow on button */
+}
+
+button:hover {
+    transform: scale(1.1); /* Enlarged effect on hover */
+    box-shadow: 0 0 40px #ffffff; /* Stronger white glow on hover */
+}
+
+/* SVG Styling */
+svg {
+    border: 4px solid #ffffff; /* White border for contrast */
+    background-color: #111111; /* Dark background */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6), 0 0 20px #ffffff; /* White glowing effect on SVG */
+    border-radius: 16px;
+}
+
+/* Gridlines */
+.grid line {
+    stroke: #888888; /* Subtle gridlines to not overpower the rainbow */
+    stroke-opacity: 0.8;
+    shape-rendering: crispEdges;
+}
+
+.grid path {
+    display: none;
+}
+
+/* Parabola */
+path.parabola {
+    stroke: #ffffff; /* White for parabola */
+    stroke-width: 3;
+    fill: none;
+    filter: drop-shadow(0 0 10px #ffffff); /* White glow effect */
+}
+
+/* Rays */
+path.line {
+    stroke-width: 3;
+    fill: none;
+}
+
+path.line:first-of-type {
+    stroke: #ff0000; /* Red for incoming ray */
+    filter: drop-shadow(0 0 10px #ff0000); /* Red glow effect */
+}
+
+path.line:last-of-type {
+    stroke: #0000ff; /* Blue for reflected ray */
+    filter: drop-shadow(0 0 10px #0000ff); /* Blue glow effect */
+}

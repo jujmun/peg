@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="style2.css"/>
+        <title>Light Game!</title>
+    </head>
+    <body>
+        <div class="controls"> 
+            <div>
+                <p>slope: <span id="slopeValue"> 0 </span></p>
+                <input class="slider" type="range" id="slopeSlider" step="0.001" min="-2" max="-1.1" value="0">
+            </div>
+            <div>
+                <p for="yintSlider">y-intercept: <span id="yintValue">0 </span></p>
+                <input class="slider" type="range" id="yintSlider" step="0.1" min="0.1" max="20" value="0">
+            </div>
+            <div>
+                <button id="submitButton">
+                    shoot! 
+                </button>
+                <button id="nextLevelButton" style="display: none;">Next Level</button>
+            </div>
+        </div>
+        
+        <script type="module" src="script2.js"></script> 
+        
+    </body>
+</html>

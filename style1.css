@@ -1,0 +1,129 @@
+/* General Reset */
+body {
+    padding: 10px;
+    font-family: "Courier New", Courier, monospace; /* Monospace font for retro game feel */
+    background-color: #000000; /* Deep black background for contrast */
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+/* Fixed container for sliders */
+.controls {
+    top: 100px; /* Distance from the top of the screen */
+    background-color: rgba(25, 25, 25, 0.9); /* Transparent black */
+    padding: 20px;
+    border-radius: 16px; /* Rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6), 0 0 20px #00ffcc; /* Sci-fi glow */
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    margin-right: 20px;
+    border: 3px solid #00ffcc; /* Neon teal border */
+}
+
+/* Labels and sliders */
+label {
+    font-size: 1rem;
+    margin-right: 10px;
+    font-weight: bold;
+    color: #ff007f; /* Neon magenta */
+    text-transform: uppercase;
+}
+
+input[type="range"] {
+    width: 200px;
+    margin: 0 10px;
+    -webkit-appearance: none;
+    appearance: none;
+    background: linear-gradient(to right, #00ffcc, #ff007f); /* Laser beam gradient */
+    border-radius: 10px;
+    height: 10px;
+    cursor: pointer;
+    box-shadow: 0 0 15px #00ffcc, 0 0 15px #ff007f inset; /* Glowing slider track */
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    background: #ff007f; /* Neon magenta thumb */
+    width: 20px;
+    height: 20px;
+    border-radius: 50%; /* Circular thumb */
+    border: 2px solid #ffffff; /* White border */
+    box-shadow: 0 0 15px #ff007f; /* Glow effect */
+}
+
+span {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #00ffcc; /* Neon teal */
+}
+
+/* Submit Button */
+button {
+    background-color: #ff007f; /* Neon magenta button */
+    color: white;
+    border: 3px solid #00ffcc; /* Neon teal border */
+    padding: 15px 25px;
+    font-size: 1.2rem;
+    font-family: "Courier New", 'Courier New', Courier, monospace;
+    font-weight: bold;
+    border-radius: 50px; /* Rounded for a sleek effect */
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    margin-top: 30px;
+    text-transform: uppercase;
+    box-shadow: 0 0 20px #ff007f, 0 0 20px #00ffcc; /* Dual glow */
+}
+
+button:hover {
+    transform: scale(1.1); /* Subtle scale effect */
+    box-shadow: 0 0 30px #ff007f, 0 0 30px #00ffcc; /* Intense glow */
+}
+
+/* SVG Styling */
+svg {
+    border: 4px solid #00ffcc; /* Neon teal border */
+    background-color: #111111; /* Dark background for contrast */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6), 0 0 25px #00ffcc; /* Glowing effect */
+    border-radius: 16px; /* Rounded edges */
+}
+
+/* Gridlines */
+.grid line {
+    stroke: #222222; /* Subtle dark gray gridlines */
+    stroke-opacity: 0.8;
+    shape-rendering: crispEdges;
+}
+
+.grid path {
+    display: none;
+}
+
+/* Parabola */
+path.parabola {
+    stroke: #00ffcc; /* Neon teal */
+    stroke-width: 3;
+    fill: none;
+    filter: drop-shadow(0 0 10px #00ffcc); /* Glow effect */
+}
+
+/* Rays */
+path.line {
+    stroke-width: 3;
+    fill: none;
+}
+
+path.line:first-of-type {
+    stroke: #ff007f; /* Neon magenta for incoming ray */
+    filter: drop-shadow(0 0 10px #ff007f); /* Glow effect */
+}
+
+path.line:last-of-type {
+    stroke: #00ffcc; /* Neon teal for reflected ray */
+    filter: drop-shadow(0 0 10px #00ffcc); /* Glow effect */
+}
